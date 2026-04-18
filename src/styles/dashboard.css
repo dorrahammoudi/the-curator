@@ -1,0 +1,503 @@
+/* Profile Header */
+.profile-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.profile-info {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-info h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.program {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.badges {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.edit-profile-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Academic Activity */
+.academic-activity {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.academic-activity h2 {
+  font-size: 1.25rem;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: #666;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Chart */
+.academic-chart {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  min-height: 280px;
+}
+
+.chart-y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45px;
+  text-align: right;
+  padding-right: 10px;
+  border-right: 1px solid #e0e0e0;
+}
+
+.y-label {
+  font-size: 0.7rem;
+  color: #999;
+}
+
+.chart-bars {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 1rem;
+  padding-bottom: 25px;
+}
+
+.chart-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.bars-container {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  justify-content: center;
+  height: 200px;
+}
+
+.bar {
+  width: 35px;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bar-consultations {
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+}
+
+.bar-telechargements {
+  background: linear-gradient(180deg, #f093fb 0%, #f5576c 100%);
+}
+
+.bar-value {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #333;
+  background: white;
+  padding: 2px 6px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+.bar-label {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #666;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.legend-color.consultations {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.legend-color.telechargements {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Objectives */
+.objectives {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.objectives h2 {
+  font-size: 1.125rem;
+  color: #1a1a2e;
+  margin-bottom: 1.5rem;
+}
+
+.objective-item {
+  margin-bottom: 1.5rem;
+}
+
+.objective-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.objective-label {
+  font-weight: 500;
+  color: #1a1a2e;
+  font-size: 0.875rem;
+}
+
+.edit-percentage-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9b59b6;
+  opacity: 0;
+}
+
+.objective-item:hover .edit-percentage-btn {
+  opacity: 1;
+}
+
+/* Progress Bar */
+.progress-item {
+  margin-bottom: 1rem;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.progress-percent {
+  font-weight: 600;
+  color: #9b59b6;
+}
+
+.progress-bar {
+  background: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+  background: linear-gradient(90deg, #9b59b6 0%, #8e44ad 100%);
+}
+
+/* Popular Tags */
+.popular-tags {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.popular-tags h2 {
+  font-size: 1.125rem;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.tags-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tag-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.tag-item:hover {
+  background: #f0f0f0;
+  transform: translateX(5px);
+}
+
+.tag-name {
+  font-weight: 500;
+  color: #1a1a2e;
+}
+
+.tag-count {
+  font-size: 0.875rem;
+  color: #9b59b6;
+}
+
+/* Interests */
+.interests {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.interests h2 {
+  font-size: 1.125rem;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+}
+
+.interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.interest-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f0f0f0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  color: #1a1a2e;
+}
+
+.interest-tag:hover {
+  background: #9b59b6;
+  color: white;
+}
+
+.remove-tag-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.add-tag-btn {
+  background: transparent;
+  border: 2px dashed #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #666;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.add-tag-btn:hover {
+  border-color: #9b59b6;
+  color: #9b59b6;
+}
+
+.suggested-tags {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.suggested-title {
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.suggested-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.suggested-tag {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.suggested-tag:hover {
+  background: #9b59b6;
+  color: white;
+  border-color: #9b59b6;
+}
+
+/* Top Percent Badge */
+.top-percent-badge {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.badge-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+  border-radius: 16px;
+}
+
+.badge-text h3 {
+  font-size: 1.5rem;
+  color: #9b59b6;
+  margin-bottom: 0.5rem;
+}
+
+.badge-text p {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.see-all-tags {
+  background: transparent;
+  border: none;
+  color: #9b59b6;
+  font-size: 0.875rem;
+  cursor: pointer;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.see-all-tags:hover {
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    padding: 1.5rem;
+  }
+  
+  .profile-info h1 {
+    font-size: 1.5rem;
+  }
+  
+  .badges {
+    gap: 0.5rem;
+  }
+  
+  .academic-chart {
+    flex-direction: column;
+  }
+  
+  .chart-y-axis {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+  }
+  
+  .bar {
+    width: 25px;
+  }
+}

@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #f5f7fa;
+  color: #1a1a2e;
+}
+
+/* Layout */
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fa;
+}
+
+/* Main Content */
+.layout-main {
+  flex: 1;
+  margin-left: 260px;
+  margin-top: 60px;
+  background: #f5f7fa;
+  overflow-y: auto;
+  height: calc(100vh - 60px);
+}
+
+.dashboard-content {
+  padding: 2rem;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.grid-2cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9b59b6;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8e44ad;
+}
+
+@media (max-width: 1024px) {
+  .grid-2cols {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .dashboard-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout-main {
+    margin-left: 0;
+  }
+}

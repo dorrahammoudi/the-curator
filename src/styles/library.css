@@ -1,0 +1,403 @@
+/* Library Page */
+.library-page {
+    padding: 2rem;
+    background: #f5f7fa;
+    min-height: 100vh;
+  }
+  
+  .library-header {
+    margin-bottom: 2rem;
+  }
+  
+  .library-header h1 {
+    font-size: 1.75rem;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+  }
+  
+  .library-header p {
+    color: #666;
+    font-size: 0.875rem;
+  }
+  
+  .library-controls {
+    margin-bottom: 2rem;
+  }
+  
+  .search-filter {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .search-box {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+  }
+  
+  .search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 0.875rem;
+    background: transparent;
+  }
+  
+  .filter-select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    font-size: 0.875rem;
+    min-width: 150px;
+  }
+  
+  .add-resource-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .add-resource-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(155, 89, 182, 0.3);
+  }
+  
+  .search-stats {
+    margin-bottom: 1rem;
+  }
+  
+  .search-stats p {
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  .resources-table-container {
+    background: white;
+    border-radius: 20px;
+    overflow-x: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+  }
+  
+  .resources-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+  }
+  
+  .resources-table th {
+    text-align: left;
+    padding: 1rem;
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #1a1a2e;
+    font-size: 0.75rem;
+    border-bottom: 2px solid #e0e0e0;
+  }
+  
+  .resources-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.875rem;
+    color: #333;
+    vertical-align: middle;
+  }
+  
+  .resources-table tr:hover {
+    background: #faf5ff;
+  }
+  
+  .type-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  
+  .type-badge.pdf {
+    background: #fee2e2;
+    color: #ef4444;
+  }
+  
+  .type-badge.vidéo {
+    background: #dbeafe;
+    color: #3b82f6;
+  }
+  
+  .type-badge.quiz {
+    background: #d1fae5;
+    color: #10b981;
+  }
+  
+  .resource-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .resource-tag {
+    background: #f0f0f0;
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    color: #666;
+  }
+  
+  /* ========== BOUTONS D'ACTION - DÉGRADÉS DE MAUVE ========== */
+  .action-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Bouton Voir - Violet foncé */
+  .view-btn {
+    background: linear-gradient(135deg, #6a1b9a 0%, #8e24aa 100%);
+    color: white;
+  }
+  
+  .view-btn:hover {
+    background: linear-gradient(135deg, #7b1fa2 0%, #9c27b0 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(106, 27, 154, 0.3);
+  }
+  
+  /* Bouton Télécharger - Mauve moyen */
+  .download-btn {
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+    color: white;
+  }
+  
+  .download-btn:hover {
+    background: linear-gradient(135deg, #a569bd 0%, #9b59b6 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(155, 89, 182, 0.3);
+  }
+  
+  /* Bouton Supprimer - Mauve clair rosé */
+  .delete-btn {
+    background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background: linear-gradient(135deg, #f06292 0%, #e91e63 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(233, 30, 99, 0.3);
+  }
+  
+  /* Bouton Favoris - Mauve pastel */
+  .favorite-btn {
+    background: linear-gradient(135deg, #ce93d8 0%, #ba68c8 100%);
+    color: white;
+  }
+  
+  .favorite-btn:hover {
+    background: linear-gradient(135deg, #e1bee7 0%, #ce93d8 100%);
+    transform: translateY(-2px);
+  }
+  
+  /* ========== MODAL ========== */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: white;
+    border-radius: 20px;
+    width: 550px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .modal-header h3 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .modal-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .form-group input[type="file"] {
+    padding: 8px;
+    border: 1px dashed #9b59b6;
+    background: #faf5ff;
+  }
+  
+  .hint-text {
+    display: block;
+    font-size: 11px;
+    color: #999;
+    margin-top: 5px;
+  }
+  
+  .selected-file {
+    font-size: 12px;
+    color: #10b981;
+    margin-top: 5px;
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 20px;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .cancel-btn {
+    padding: 8px 16px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .add-btn {
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(155, 89, 182, 0.3);
+  }
+  
+  .delete-modal {
+    max-width: 400px;
+  }
+  
+  .delete-resource-title {
+    font-weight: bold;
+    color: #c2185b;
+    text-align: center;
+    margin: 15px 0;
+  }
+  
+  .delete-warning {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+  }
+  
+  .delete-confirm-btn {
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .delete-confirm-btn:hover {
+    background: linear-gradient(135deg, #f06292 0%, #e91e63 100%);
+  }
+  
+  @media (max-width: 768px) {
+    .library-page {
+      padding: 1rem;
+    }
+    
+    .search-filter {
+      flex-direction: column;
+    }
+    
+    .search-box,
+    .filter-select,
+    .add-resource-btn {
+      width: 100%;
+    }
+    
+    .action-buttons {
+      flex-direction: column;
+    }
+    
+    .action-btn {
+      justify-content: center;
+    }
+    
+    .modal-content {
+      width: 95%;
+    }
+  }
